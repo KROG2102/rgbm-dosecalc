@@ -1,0 +1,49 @@
+name: Build Android app (APK)
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 21 }
+      - uses: android-actions/setup-android@v3
+      - name: Install and check
+        run: npm ci && node --check dist/app.js && node tests/app.test.cjs
+      - name: Sync web assets into Android project
+        run: npx cap sync android
+      - name: Prepare signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then echo "$KEYSTORE_B64" | base64 -d > android/app/release.keystore; echo "SIGNED=1" >> $GITHUB_ENV; fi
+      - name: Build APK
+        working-directory: android
+        env:
+          KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          if [ "$SIGNED" = "1" ]; then
+            ./gradlew assembleRelease -Pandroid.injected.signing.store.file=$PWD/app/release.keystore -Pandroid.injected.signing.store.password="$KS_PASS" -Pandroid.injected.signing.key.alias="$KEY_ALIAS" -Pandroid.injected.signing.key.password="$KEY_PASS"
+            cp app/build/outputs/apk/release/app-release.apk ../rGBM-DoseCalc.apk
+          else
+            ./gradlew assembleDebug
+            cp app/build/outputs/apk/debug/app-debug.apk ../rGBM-DoseCalc.apk
+          fi
+      - uses: actions/upload-artifact@v4
+        with: { name: rGBM-DoseCalc-apk, path: rGBM-DoseCalc.apk }
+      - name: Publish download link (GitHub Release)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rGBM-DoseCalc.apk
+          body: "rGBM DoseCalc Android installer. Research use only; not externally validated."

@@ -1,0 +1,17 @@
+{
+  "name": "rGBM DoseCalc",
+  "short_name": "DoseCalc",
+  "description": "Research companion to the KROG 21-02 reirradiation dose–survival analysis. Not a validated prescribing tool.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f6fa",
+  "theme_color": "#ffffff",
+  "lang": "en",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

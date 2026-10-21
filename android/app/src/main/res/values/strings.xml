@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">rGBM DoseCalc</string>
+    <string name="title_activity_main">rGBM DoseCalc</string>
+    <string name="package_name">org.research.rgbmdoseexplorer</string>
+    <string name="custom_url_scheme">org.research.rgbmdoseexplorer</string>
+</resources>

@@ -1,0 +1,24 @@
+{
+  "name": "rgbm-dose-explorer",
+  "version": "1.2.1",
+  "private": true,
+  "description": "Research companion to the KROG 21-02 reirradiation dose analysis",
+  "packageManager": "npm@11.9.0",
+  "scripts": {
+    "build:bridge": "esbuild native/bridge.js --bundle --format=iife --target=es2020 --outfile=dist/native-bridge.js",
+    "sync": "npm run build:bridge && cap sync",
+    "android": "cap open android",
+    "ios": "cap open ios",
+    "check": "node --check dist/app.js && node tests/app.test.cjs"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.3",
+    "@capacitor/android": "8.5.3",
+    "@capacitor/ios": "8.5.3",
+    "@capacitor/share": "8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3",
+    "esbuild": "0.25.0"
+  }
+}

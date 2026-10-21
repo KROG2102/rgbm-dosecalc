@@ -1,0 +1,6 @@
+{
+  "appId": "org.research.rgbmdoseexplorer",
+  "appName": "rGBM DoseCalc",
+  "webDir": "dist",
+  "backgroundColor": "#f4f6fa"
+}

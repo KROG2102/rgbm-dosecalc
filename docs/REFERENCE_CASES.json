@@ -1,0 +1,33 @@
+{
+  "model_sha256": "eb75a4d018a7faf82f5d14171ba8e1d27569fcb1b0e56aa8e17a0f11f8c0a6ab",
+  "profile": {
+    "age": 55,
+    "KPS_ge80": true,
+    "interval_months": 12,
+    "surgery": true
+  },
+  "initial_RT": {
+    "dose_Gy": 60,
+    "fractions": 30
+  },
+  "cases": [
+    {
+      "dose_Gy": 35,
+      "fractions": 10,
+      "cumulative_EQD2_10": 99.375,
+      "OS_12_months": 0.7367213673426922,
+      "RN_group_events": 2,
+      "RN_group_n": 87
+    },
+    {
+      "dose_Gy": 45,
+      "fractions": 15,
+      "cumulative_EQD2_10": 108.75,
+      "cumulative_EQD2_3": 114,
+      "OS_12_months": 0.7336978280096895,
+      "RN_group_events": 10,
+      "RN_group_n": 79
+    }
+  ],
+  "note": "Reference calculations; not independently validated patient predictions."
+}
