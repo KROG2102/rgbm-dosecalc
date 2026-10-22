@@ -1,5 +1,7 @@
 # rGBM DoseCalc 1.2.1
 
+Website: https://krog2102.github.io/rgbm-dosecalc/  ·  Android installer: see the Releases page of this repository.
+
 English-language research companion to the KROG 21-02 dose–survival analysis. It uses the same offline calculation code for the web, Android and iOS targets.
 
 ## Status
@@ -27,7 +29,7 @@ npm run android
 npm run ios
 ```
 
-Android requires Android Studio and the Android SDK. iOS requires macOS and Xcode. Select your developer team and signing identity in the platform tools. The current `org.research.rgbmdoseexplorer` application identifier is a development placeholder and must be replaced consistently in native projects before a store release. No signing identities, team IDs or release keystores are supplied.
+Android requires Android Studio and the Android SDK. iOS requires macOS and Xcode. Select your developer team and signing identity in the platform tools. The application identifier is `io.github.krog2102.rgbmdosecalc` (set 22 October 2026, before the first installable build). No signing identities, team IDs or release keystores are supplied.
 
 A release Android build produces an APK/AAB using Gradle/Android Studio. An iOS archive requires Xcode and signing/provisioning for the selected distribution route. Neither release is supplied in this source package.
 

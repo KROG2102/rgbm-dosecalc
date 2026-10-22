@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "org.research.rgbmdoseexplorer"
+    namespace = "io.github.krog2102.rgbmdosecalc"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "org.research.rgbmdoseexplorer"
+        applicationId "io.github.krog2102.rgbmdosecalc"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 2

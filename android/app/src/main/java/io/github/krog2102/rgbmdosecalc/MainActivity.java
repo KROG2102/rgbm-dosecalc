@@ -1,4 +1,4 @@
-package org.research.rgbmdoseexplorer;
+package io.github.krog2102.rgbmdosecalc;
 
 import com.getcapacitor.BridgeActivity;
 

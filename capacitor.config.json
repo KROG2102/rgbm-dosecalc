@@ -1,5 +1,5 @@
 {
-  "appId": "org.research.rgbmdoseexplorer",
+  "appId": "io.github.krog2102.rgbmdosecalc",
   "appName": "rGBM DoseCalc",
   "webDir": "dist",
   "backgroundColor": "#f4f6fa"

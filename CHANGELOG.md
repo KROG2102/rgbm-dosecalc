@@ -10,6 +10,7 @@
 - Mobile layout: bottom tab bar with safe-area padding, compact A/B stat cards, survival/dose/RN charts drawn at 380-unit width on narrow screens, detailed table fits without horizontal scroll, input errors shown on the Parameters tab.
 - Launch screen: icon, title and research-use notice for about 1.6 s, then fades to the calculator (shorter if reduced motion is set).
 - Native projects: new launcher icons and splash images (Android adaptive icon, iOS), versionName/MARKETING_VERSION 1.2.1.
+- Application identifier set to io.github.krog2102.rgbmdosecalc.
 - GitHub Actions workflows: website deployment to GitHub Pages; Android APK build.
 - Installable web app (PWA): manifest, icons (new navy icon with A/B curves), network-first service worker for offline use; not registered inside the native Capacitor shell.
 
