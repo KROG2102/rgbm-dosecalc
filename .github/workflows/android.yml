@@ -14,7 +14,6 @@ jobs:
         with: { node-version: 22 }
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: 21 }
-      - uses: android-actions/setup-android@v3
       - name: Install and check
         run: npm ci && node --check dist/app.js && node tests/app.test.cjs
       - name: Sync web assets into Android project
