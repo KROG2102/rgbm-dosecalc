@@ -35,8 +35,8 @@ jobs:
             ./gradlew assembleRelease -Pandroid.injected.signing.store.file=$PWD/app/release.keystore -Pandroid.injected.signing.store.password="$KS_PASS" -Pandroid.injected.signing.key.alias="$KEY_ALIAS" -Pandroid.injected.signing.key.password="$KEY_PASS"
             cp app/build/outputs/apk/release/app-release.apk ../rGBM-DoseCalc.apk
           else
-            ./gradlew assembleDebug
-            cp app/build/outputs/apk/debug/app-debug.apk ../rGBM-DoseCalc.apk
+            ./gradlew assembleRelease
+            cp app/build/outputs/apk/release/app-release.apk ../rGBM-DoseCalc.apk
           fi
       - uses: actions/upload-artifact@v4
         with: { name: rGBM-DoseCalc-apk, path: rGBM-DoseCalc.apk }

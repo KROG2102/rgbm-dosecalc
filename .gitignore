@@ -1,4 +1,5 @@
 node_modules/
 .DS_Store
 *.keystore
+!android/app/dosecalc-shared.keystore
 *.jks
