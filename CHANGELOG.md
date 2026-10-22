@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3 — 22 October 2026
+- Display only; no change to model parameters, calculations or display limits.
+- Removed the optional whole-cohort Kaplan–Meier overlay (could be misread as observed outcomes for the selected profile or as a model accuracy check).
+- Results show the selected regimens (dose / fractions and dose per fraction) above the cards and in the survival-chart legend.
+- Larger text for chart labels, card titles, notes and field labels.
+
 ## 1.2.2 — 22 October 2026
 - Display only; no change to model parameters, calculations or display limits.
 - App mode (installed Android app or iOS home-screen app) on phones: opens on Parameters; a live bar shows A/B 12-month OS while inputs change, with a "View results" button; Enter on the last field opens Results.
