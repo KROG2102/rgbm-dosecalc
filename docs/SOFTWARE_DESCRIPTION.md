@@ -1,14 +1,14 @@
 # rGBM DoseCalc — software description for journal submission
 
-Version 1.2.1 • 21 October 2026 • Model snapshot: KROG2102-20261006
+Version 1.2.2 • 21 October 2026 • Model snapshot: KROG2102-20261006
 
 ## Manuscript paragraph (current status)
 
-An English-language research companion, rGBM DoseCalc (version 1.2.1), was developed to visualise the dose–survival associations estimated in this cohort. The application calculates prescription-based cumulative EQD2 using α/β values of 10 Gy and 3 Gy and compares two reirradiation regimens under the same patient covariates. Survival estimates are derived from the primary quadratic Cox model, adjusted for age at recurrence, Karnofsky performance status, the interval between radiotherapy courses, and salvage surgery. A Breslow baseline cumulative hazard was additionally estimated from the source data to display absolute survival probabilities; pointwise 95% intervals were obtained from 200 patient-level bootstrap resamples. Radiation necrosis is displayed only as documented dose-group proportions with Wilson confidence intervals, without individual or time-specific toxicity prediction. Numerical model reproduction and automated calculation checks were completed. External predictive validation and clinical utility evaluation have not been performed. The software is intended for research and educational exploration, rather than treatment prescription.
+An English-language research companion, rGBM DoseCalc (version 1.2.2), was developed to visualise the dose–survival associations estimated in this cohort. The application calculates prescription-based cumulative EQD2 using α/β values of 10 Gy and 3 Gy and compares two reirradiation regimens under the same patient covariates. Survival estimates are derived from the primary quadratic Cox model, adjusted for age at recurrence, Karnofsky performance status, the interval between radiotherapy courses, and salvage surgery. A Breslow baseline cumulative hazard was additionally estimated from the source data to display absolute survival probabilities; pointwise 95% intervals were obtained from 200 patient-level bootstrap resamples. Radiation necrosis is displayed only as documented dose-group proportions with Wilson confidence intervals, without individual or time-specific toxicity prediction. Numerical model reproduction and automated calculation checks were completed. External predictive validation and clinical utility evaluation have not been performed. The software is intended for research and educational exploration, rather than treatment prescription.
 
 ## Software availability statement — accurate at this release
 
-rGBM DoseCalc 1.2.1 is a static web application (HTML/JavaScript plus `model.json`). A public deployment address will be recorded here once it is confirmed; until then the earlier public instance (version 1.2.0 with A/B colour update) remains at https://rgbm-dose-explorer.bluepanda2.chatgpt.site. Android/iOS Capacitor project sources exist; signed installation packages and app-store releases do not. Source-code licence and ownership remain for the authors/institution to decide.
+rGBM DoseCalc 1.2.2 is a static web application (HTML/JavaScript plus `model.json`). A public deployment address will be recorded here once it is confirmed; until then the earlier public instance (version 1.2.0 with A/B colour update) remains at https://rgbm-dose-explorer.bluepanda2.chatgpt.site. Android/iOS Capacitor project sources exist; signed installation packages and app-store releases do not. Source-code licence and ownership remain for the authors/institution to decide.
 
 ## Supplementary methods
 
@@ -29,7 +29,7 @@ rGBM DoseCalc 1.2.1 is a static web application (HTML/JavaScript plus `model.jso
 2. Model sample size, event count and fitted hazard nadir reconciled with the final manuscript: 165, 147 and 103.7986 Gy.
 3. RN counts reproduced: 2/87 and 10/79.
 4. Automated tests cover representative EQD2 calculations, the 114 Gy classification boundary, monotone survival probabilities, ordered uncertainty limits, dose-range suppression, empty inputs, reset, KM overlay and mobile section switching.
-5. Version 1.2.1 (21 October 2026): headless Chromium checks at 1366 px and 390 px widths confirmed reference outputs (absolute tolerance 1e-12), input changes, out-of-range suppression, KM overlay, CSV export and absence of console errors.
+5. Version 1.2.2 (21 October 2026): headless Chromium checks at 1366 px and 390 px widths confirmed reference outputs (absolute tolerance 1e-12), input changes, out-of-range suppression, KM overlay, CSV export and absence of console errors.
 
 ## Remaining evaluation
 

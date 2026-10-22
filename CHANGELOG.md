@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2 — 22 October 2026
+- Display only; no change to model parameters, calculations or display limits.
+- App mode (installed Android app or iOS home-screen app) on phones: opens on Parameters; a live bar shows A/B 12-month OS while inputs change, with a "View results" button; Enter on the last field opens Results.
+- Sliding segmented tab indicator, short view fade (200 ms, strong ease-out curve), 160 ms press feedback, overscroll locked in app mode; all motion off under reduced-motion (Emil Kowalski design-engineering guidance).
+- Launch screen shortened to about 1.2 s. The browser website keeps the previous layout.
+
 ## 1.2.1 — 21 October 2026
 - Display only; no change to model parameters, calculations or display limits.
 - Regimen colours A #1459b5 (solid) / B #c4530a (dashed), introduced after 1.2.0, are now part of a numbered release.
