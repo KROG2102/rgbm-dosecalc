@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.4 — 23 October 2026 (submission version)
+- Display only: app-mode live result bar puts its label above the A/B values so it no longer touches the "View results" button on 360–390-pixel-wide phones.
+
 ## 1.2.3 — 22 October 2026
 - Display only; no change to model parameters, calculations or display limits.
 - Removed the optional whole-cohort Kaplan–Meier overlay (could be misread as observed outcomes for the selected profile or as a model accuracy check).

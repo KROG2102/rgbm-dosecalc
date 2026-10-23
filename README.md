@@ -1,4 +1,4 @@
-# rGBM DoseCalc 1.2.3
+# rGBM DoseCalc 1.2.4
 
 Website: https://krog2102.github.io/rgbm-dosecalc/  ·  Android installer: see the Releases page of this repository.
 
