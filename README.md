@@ -1,6 +1,6 @@
 # rGBM DoseCalc 1.2.4
 
-Website: https://krog2102.github.io/rgbm-dosecalc/  ·  Android installer: see the Releases page of this repository.
+Website: https://krog2102.github.io/rgbm-dosecalc/  ·  Android test builds produced during development are on the Releases page; Android and iOS applications have not been released through app stores.
 
 English-language research companion to the KROG 21-02 dose–survival analysis. It uses the same offline calculation code for the web, Android and iOS targets.
 
